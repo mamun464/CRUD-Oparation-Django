@@ -1,0 +1,31 @@
+{% extends 'enroll/base.html' %}
+
+{% block content %}
+<div >
+    <div class="col-sm-4">
+        <h4 class="alert alert-info">Add New Student</h4>
+        <form action="" method="post">
+        {% csrf_token %}
+        <br>
+        <label for="username">Username</label>
+        <input type="text" value= {{id.name}} name="username" id="username" >
+        <br>
+        <br>
+        <label for="email">Email</label>
+        <input type="email" value= {{id.email}} name="email" id="email">
+        <br>
+        <br>
+        <label for="password1">Password</label>
+        <input type="password" value= {{id.password}} id="password" name="password">
+        <br>
+        <br>
+
+
+        <input type="submit" class="btn btn-success" value="Update">
+        <a href="{% url 'addandshow'%}" class="btn btn-info">Back to home</a>
+        <br>
+        <br>
+        </form>
+    </div>
+</div>
+{% endblock content %} 
